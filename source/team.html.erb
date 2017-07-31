@@ -1,8 +1,19 @@
-<ul class="list-inline text-center">
-  <% ["gnovo", "msz4msz"].each do |gh_username| %>
-    <li>
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{gh_username}", class: "img-circle" %>
-      <h3><%= gh_username.capitalize %></h3>
-    </li>
-  <% end %>
-</ul>
+<div id="about">
+  <div class="about-content">
+    <h1>This template was built with <i class="fa fa-heart"></i> by</h1>
+	    <ul class="list-inline text-center">
+	  <% ["gnovo", "msz4msz"].each do |gh_username| %>
+	    <li>
+	      <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{gh_username}", class: "img-circle" %>
+	      <h2><%= gh_username.capitalize %></h2>
+	      <p>
+	      	<% link_to "https://github.com/#{gh_username}", target: "_blank" do %>
+              <i class="fa fa-github"></i> <%= gh_username %>
+            <% end %>
+	      </p>
+	    </li>
+	  <% end %>
+	</ul>
+  </div>
+</div>
+
